@@ -5,7 +5,7 @@ addPercentCoverage = function(D,Step=1000,maxPages=2,globalOnly=FALSE) {
     # group_by(friendlyName,friendlyKey,basisOfRecord,country,license) %>%
     # summarise(numSpeciesWithImages = n()) %>%
     # filter(numSpeciesWithImages >= !!minNumSpeciesWithImages)
-
+	# 
   if(!globalOnly) {
 
   uniqueCountries = D$country %>%
