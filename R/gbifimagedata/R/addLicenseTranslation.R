@@ -1,6 +1,6 @@
 # adds license and taxonmic information to imageData.rda. saves imageDataTaxonAndLicense.rda
 
-addLicenseTranslation = function(D,Rank="SPECIES") {
+addLicenseTranslation = function(D) {
 
   # fix two countries problem
   twoCountries = D$countryCode %>% map(~ length(.x) < 1) %>% flatten_lgl()
