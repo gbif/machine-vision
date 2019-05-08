@@ -7,3 +7,6 @@ Two additional columns are added to the multimedia extension:
 
 This is very close to the usual DWCA files shared by GBIF, but keeping that close compatibility
 is probably too limiting.
+
+**This are very rough scripts, just to help us define an export format.**
+(And writing them in R or Python would have been a much better idea…)
