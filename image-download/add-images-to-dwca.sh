@@ -49,7 +49,8 @@ mv multimedia.txt multimedia-original.txt
 
 echo "gbifID	type	format	identifier	furtherInformationURL	title	description	CreateDate	creator	contributor	providerLiteral	audience	source	rights	Owner	Image	ThumbnailURL" > multimedia.txt
 
-paste multimedia-original.txt <(cut -d$'\t' -f 3,4 image-names) | tail -n +2 >> multimedia.txt
+# Append columns to original file, then strip out rows without an image
+paste multimedia-original.txt <(cut -d$'\t' -f 3,4 image-names) | tail -n +2 | grep -v $'\t\t$' >> multimedia.txt
 
 if [[ -n "images/*.problem(N)" ]]; then
 	echo "Problems retrieving these images:"
