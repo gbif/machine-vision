@@ -203,3 +203,491 @@ arrange(-percentCoverage,license)
 
 * 64% of ants have 1 or more images (preserved specimen)
 * Only 1% of ants species allow for commercial use (preserved specimen)
+
+# Spider analysis
+
+[spider images](https://www.gbif.org/occurrence/gallery?media_type=StillImage&taxon_key=1496)
+
+```
+library(gbifimagedata)
+library(dplyr)
+
+saveDir = "C:/Users/ftw712/Desktop/image data friendly taxa/data/spiders/"
+
+getImageData(friendlyName="spiders",friendlyKey="1496",Step=100,maxPages=2000) %>% 
+saveData(saveDir,fileName="imageData.rda") %>% # save the data from the most expensive step
+loadData(saveDir=saveDir,fileName="imageData.rda") %>% # load that data from disk
+filter(taxonomicStatus == "ACCEPTED") %>% # get only ACCEPTED species
+filter(rank == "SPECIES") %>% # only get for Rank SPECIES
+addLicenseTranslation() %>%
+summariseTable() %>%
+filter(imageCount >= 1) %>% # only get species with more than n images
+groupSummarise() %>%
+filter(country == "world") %>% 
+addPercentCoverage(globalOnly=TRUE) %>%
+addWorldPercentage() %>% # adds through a different api
+select(friendlyName,country,basisOfRecord,license,percentCoverage) %>%  
+arrange(-percentCoverage,license)
+```
+
+```
+   friendlyName country basisOfRecord     license                percentCoverage
+   <chr>        <chr>   <chr>             <chr>                            <dbl>
+ 1 spiders      world   HUMAN_OBSERVATION total                           5.06  
+ 2 spiders      world   HUMAN_OBSERVATION only non-commercial u~          4.26  
+ 3 spiders      world   PRESERVED_SPECIM~ total                           1.98  
+ 4 spiders      world   PRESERVED_SPECIM~ only non-commercial u~          1.86  
+ 5 spiders      world   HUMAN_OBSERVATION commercial use allowed          1.65  
+ 6 spiders      world   UNKNOWN           total                           1.22  
+ 7 spiders      world   UNKNOWN           only non-commercial u~          1.21  
+ 8 spiders      world   UNKNOWN           commercial use allowed          0.115 
+ 9 spiders      world   FOSSIL_SPECIMEN   total                           0.0948
+10 spiders      world   FOSSIL_SPECIMEN   commercial use allowed          0.0726
+11 spiders      world   MATERIAL_SAMPLE   only non-commercial u~          0.0242
+12 spiders      world   MATERIAL_SAMPLE   total                           0.0242
+13 spiders      world   FOSSIL_SPECIMEN   only non-commercial u~          0.0222
+14 spiders      world   PRESERVED_SPECIM~ commercial use allowed          0.0202
+```
+* Only 5% of spiders have 1 or more images 
+* 2508 species with images 
+
+# Swallowtail butterflies 
+
+```
+
+library(gbifimagedata)
+library(dplyr)
+
+saveDir = "C:/Users/ftw712/Desktop/image data friendly taxa/data/swallowtail butterflies/"
+
+getImageData(friendlyName="swallowtail butterflies",friendlyKey="9417",Step=100,maxPages=2000) %>% 
+saveData(saveDir,fileName="imageData.rda") %>% # save the data from the most expensive step
+loadData(saveDir=saveDir,fileName="imageData.rda") %>% # load that data from disk
+filter(taxonomicStatus == "ACCEPTED") %>% # get only ACCEPTED species
+filter(rank == "SPECIES") %>% # only get for Rank SPECIES
+addLicenseTranslation() %>%
+summariseTable() %>%
+filter(imageCount >= 1) %>% # only get species with more than n images
+groupSummarise() %>%
+filter(country == "world") %>% 
+addPercentCoverage(globalOnly=TRUE) %>%
+addWorldPercentage() %>% # adds through a different api
+select(friendlyName,country,basisOfRecord,license,percentCoverage,numSpeciesWithImages) %>%  
+print() %>% 
+select(friendlyName,country,basisOfRecord,license,percentCoverage) %>%  
+arrange(-percentCoverage,license)
+
+```
+
+```
+   friendlyName       country basisOfRecord   license            percentCoverage
+   <chr>              <chr>   <chr>           <chr>                        <dbl>
+ 1 swallowtail butte~ world   PRESERVED_SPEC~ total                       62.7  
+ 2 swallowtail butte~ world   PRESERVED_SPEC~ commercial use al~          42.2  
+ 3 swallowtail butte~ world   HUMAN_OBSERVAT~ total                       38.2  
+ 4 swallowtail butte~ world   HUMAN_OBSERVAT~ only non-commerci~          36.8  
+ 5 swallowtail butte~ world   PRESERVED_SPEC~ only non-commerci~          26.8  
+ 6 swallowtail butte~ world   HUMAN_OBSERVAT~ commercial use al~          15.8  
+ 7 swallowtail butte~ world   UNKNOWN         total                        4.77 
+ 8 swallowtail butte~ world   UNKNOWN         only non-commerci~           3.58 
+ 9 swallowtail butte~ world   UNKNOWN         commercial use al~           1.64 
+10 swallowtail butte~ world   FOSSIL_SPECIMEN commercial use al~           0.149
+11 swallowtail butte~ world   FOSSIL_SPECIMEN total                        0.149
+```
+
+* 62% of swallowtail butterflies have 1 or more images (preserved specimen) 
+* 421 species with images
+* 42% with commerical use allowed (preserved specimen)
+* A lot of museum drawers full of butterflies [images](https://www.gbif.org/occurrence/gallery?basis_of_record=PRESERVED_SPECIMEN&media_type=StillImage&taxon_key=9417)
+
+# Primates 
+
+taxonkey = 798
+
+```
+  totalSpeciesWorld numWithImages basisOfRecord  license         percentCoverage
+              <int>         <int> <chr>          <chr>                     <dbl>
+1              1192           269 HUMAN_OBSERVA~ total                     22.6 
+2              1192           260 HUMAN_OBSERVA~ only non-comme~           21.8 
+3              1192           111 PRESERVED_SPE~ total                      9.31
+4              1192           101 HUMAN_OBSERVA~ commercial use~            8.47
+5              1192            78 PRESERVED_SPE~ commercial use~            6.54
+6              1192            50 FOSSIL_SPECIM~ commercial use~            4.19
+7              1192            50 FOSSIL_SPECIM~ total                      4.19
+8              1192            47 PRESERVED_SPE~ only non-comme~            3.94
+
+```
+
+* Only 22.6% with images (human observation)
+* 8% allowing commercial use
+* 269 of 1192 with images
+
+# Rodents
+
+taxonkey = 1459
+
+```
+totalSpeciesWorld numWithImages basisOfRecord  license         percentCoverage
+              <int>         <int> <chr>          <chr>                     <dbl>
+1              4909           516 HUMAN_OBSERVA~ total                   10.5   
+2              4909           489 HUMAN_OBSERVA~ only non-comme~          9.96  
+3              4909           477 PRESERVED_SPE~ total                    9.72  
+4              4909           379 PRESERVED_SPE~ commercial use~          7.72  
+5              4909           181 HUMAN_OBSERVA~ commercial use~          3.69  
+6              4909           154 PRESERVED_SPE~ only non-comme~          3.14  
+7              4909            62 FOSSIL_SPECIM~ total                    1.26  
+8              4909            61 FOSSIL_SPECIM~ commercial use~          1.24  
+9              4909             2 FOSSIL_SPECIM~ only non-comme~          0.0407
+```
+
+* 10.5% with images (human observation)
+* 516 species with images out of 4909 accepted species
+* 7% allow for commercial use
+
+# Dragonflies 
+
+taxonkey = 789
+
+```
+  totalSpeciesWorld numWithImages basisOfRecord  license         percentCoverage
+              <int>         <int> <chr>          <chr>                     <dbl>
+1              7040          1450 HUMAN_OBSERVA~ total                   20.6   
+2              7040          1369 HUMAN_OBSERVA~ only non-comme~         19.4   
+3              7040           701 HUMAN_OBSERVA~ commercial use~          9.96  
+4              7040           428 PRESERVED_SPE~ total                    6.08  
+5              7040            49 PRESERVED_SPE~ only non-comme~          0.696 
+6              7040             4 PRESERVED_SPE~ commercial use~          0.0568
+```
+
+* 20% of dragonflies have images (human observation)
+* 10% commercial use allowed (human observation)
+* 1450 sp with images out of 7040 
+
+Numbers might be slightly better since dragonflies have 227 427 occurrences with images
+
+# venomous snake family Elapidae
+
+taxonkey = 9455
+
+```
+1               398           173 HUMAN_OBSERVA~ total                     43.5 
+2               398           161 HUMAN_OBSERVA~ only non-comme~           40.5 
+3               398           146 PRESERVED_SPE~ total                     36.7 
+4               398           120 PRESERVED_SPE~ commercial use~           30.2 
+5               398            64 HUMAN_OBSERVA~ commercial use~           16.1 
+6               398            21 PRESERVED_SPE~ only non-comme~           5.28
+```
+
+* 43% with images (human observation)
+* 16% commercial use (human observation)
+* 40% only-non commercial use allowed
+* 173 of 398 species with images
+
+
+# Cactus
+
+taxonkey=2519
+
+```
+totalSpeciesWorld numWithImages basisOfRecord  license        percentCoverage
+1              1816          1063 PRESERVED_SPE~ total                    58.5  
+2              1816           776 PRESERVED_SPE~ commercial use~          42.7  
+3              1816           658 HUMAN_OBSERVA~ total                    36.2  
+4              1816           649 HUMAN_OBSERVA~ only non-comme~          35.7  
+5              1816           469 PRESERVED_SPE~ only non-comme~          25.8  
+6              1816           211 HUMAN_OBSERVA~ commercial use~          11.6  
+7              1816             9 LIVING_SPECIM~ only non-comme~           0.496
+8              1816             9 LIVING_SPECIM~ total                     0.496
+```
+
+* 58.5% with images (preserved specimen)
+* 36% commercial use allowed (human observation)
+* 1063 of 1816 with images 
+
+# Beech and Oak Tree Family 
+
+taxonkey=4689
+
+```
+   totalSpeciesWorld numWithImages basisOfRecord  license        percentCoverage
+               <int>         <int> <chr>          <chr>                    <dbl>
+ 1              1478           931 PRESERVED_SPE~ total                   63.0  
+ 2              1478           787 PRESERVED_SPE~ commercial us~          53.2  
+ 3              1478           404 PRESERVED_SPE~ only non-comm~          27.3  
+ 4              1478           244 HUMAN_OBSERVA~ total                   16.5  
+ 5              1478           240 HUMAN_OBSERVA~ only non-comm~          16.2  
+ 6              1478           105 HUMAN_OBSERVA~ commercial us~           7.10 
+ 7              1478            32 FOSSIL_SPECIM~ total                    2.17 
+ 8              1478            30 FOSSIL_SPECIM~ commercial us~           2.03 
+ 9              1478            11 LIVING_SPECIM~ only non-comm~           0.744
+10              1478            11 LIVING_SPECIM~ total                    0.744
+11              1478             2 OBSERVATION    only non-comm~           0.135
+12              1478             2 OBSERVATION    total                    0.135
+
+```
+
+* 63% with images (preserved specimen)
+* 53% with commercial use allowed (preserved specimen)
+* 931 of 1478 species 
+
+# Lichens
+
+taxonkey=1048
+
+```
+  totalSpeciesWorld numWithImages basisOfRecord  license         percentCoverage
+              <int>         <int> <chr>          <chr>                     <dbl>
+1              7478          2477 PRESERVED_SPE~ total                   33.1   
+2              7478          1925 PRESERVED_SPE~ only non-comme~         25.7   
+3              7478           801 PRESERVED_SPE~ commercial use~         10.7   
+4              7478           732 HUMAN_OBSERVA~ total                    9.79  
+5              7478           624 HUMAN_OBSERVA~ only non-comme~          8.34  
+6              7478           323 HUMAN_OBSERVA~ commercial use~          4.32  
+7              7478             1 UNKNOWN        only non-comme~          0.0134
+8              7478             1 UNKNOWN        total                    0.0134
+
+```
+
+* 33% with images (preserved specimen)
+* 2477 of 7478 species (preserved specimen)
+* 10% commercial use allowed (preserved specimen)
+* 10% with images (human obs)
+
+
+# great apes
+
+5483
+
+```
+  totalSpeciesWorld numWithImages basisOfRecord  license         percentCoverage
+              <int>         <int> <chr>          <chr>                     <dbl>
+1                81             7 PRESERVED_SPE~ total                      8.64
+2                81             5 PRESERVED_SPE~ commercial use~            6.17
+3                81             5 HUMAN_OBSERVA~ total                      6.17
+4                81             3 HUMAN_OBSERVA~ commercial use~            3.70
+5                81             3 HUMAN_OBSERVA~ only non-comme~            3.70
+6                81             3 PRESERVED_SPE~ only non-comme~            3.70
+```
+
+* Probably we have better coverage for this group than what is in the table since most of the family Hominidae is extinct. 
+
+
+# Bats
+
+734
+
+```
+   totalSpeciesWorld numWithImages basisOfRecord  license        percentCoverage
+               <int>         <int> <chr>          <chr>                    <dbl>
+ 1              1592           514 PRESERVED_SPE~ total                   32.3  
+ 2              1592           470 HUMAN_OBSERVA~ total                   29.5  
+ 3              1592           449 HUMAN_OBSERVA~ only non-comm~          28.2  
+ 4              1592           316 PRESERVED_SPE~ commercial us~          19.8  
+ 5              1592           105 PRESERVED_SPE~ only non-comm~           6.60 
+ 6              1592           100 HUMAN_OBSERVA~ commercial us~           6.28 
+ 7              1592             2 FOSSIL_SPECIM~ commercial us~           0.126
+ 8              1592             2 UNKNOWN        only non-comm~           0.126
+ 9              1592             2 FOSSIL_SPECIM~ total                    0.126
+10              1592             2 UNKNOWN        total                    0.126
+```
+ 
+* 32% with images (preserved specimen)
+* 514 of 1592 (preserved specimen)
+* 19% commercial use allowed (preserved specimen)
+* 28% with images (human observation)
+
+
+# Rabbits
+
+785
+
+```
+  totalSpeciesWorld numWithImages basisOfRecord  license         percentCoverage
+              <int>         <int> <chr>          <chr>                     <dbl>
+1               318            61 HUMAN_OBSERVA~ total                     19.2 
+2               318            58 HUMAN_OBSERVA~ only non-comme~           18.2 
+3               318            26 HUMAN_OBSERVA~ commercial use~            8.18
+4               318            23 PRESERVED_SPE~ total                      7.23
+5               318            18 PRESERVED_SPE~ commercial use~            5.66
+6               318             9 FOSSIL_SPECIM~ commercial use~            2.83
+7               318             9 PRESERVED_SPE~ only non-comme~            2.83
+8               318             9 FOSSIL_SPECIM~ total                      2.83
+```
+* 20% with images (human obs)
+* 61 of 318 (human obs)
+* 8% commercial use allowed (human obs)
+
+# Ladybugs/Ladybirds
+
+7782
+
+```
+   totalSpeciesWorld numWithImages basisOfRecord  license        percentCoverage
+               <int>         <int> <chr>          <chr>                    <dbl>
+ 1              2059           228 HUMAN_OBSERVA~ total                   11.1  
+ 2              2059           214 HUMAN_OBSERVA~ only non-comm~          10.4  
+ 3              2059           175 PRESERVED_SPE~ total                    8.50 
+ 4              2059           107 PRESERVED_SPE~ only non-comm~           5.20 
+ 5              2059           104 HUMAN_OBSERVA~ commercial us~           5.05 
+ 6              2059            76 PRESERVED_SPE~ commercial us~           3.69 
+ 7              2059            58 UNKNOWN        only non-comm~           2.82 
+ 8              2059            58 UNKNOWN        total                    2.82 
+ 9              2059            11 FOSSIL_SPECIM~ total                    0.534
+10              2059             8 FOSSIL_SPECIM~ only non-comm~           0.389
+11              2059             3 FOSSIL_SPECIM~ commercial us~           0.146
+```
+
+* 11% with images (human observation)
+* 228 of 2059 (human observation)
+* 5% commercial use allowed (human observation)
+
+# land snails
+
+6540
+
+```
+  totalSpeciesWorld numWithImages basisOfRecord  license         percentCoverage
+              <int>         <int> <chr>          <chr>                     <dbl>
+1              1723           530 PRESERVED_SPE~ total                    30.8  
+2              1723           464 PRESERVED_SPE~ commercial use~          26.9  
+3              1723            32 FOSSIL_SPECIM~ total                     1.86 
+4              1723            31 FOSSIL_SPECIM~ commercial use~           1.80 
+5              1723            24 HUMAN_OBSERVA~ only non-comme~           1.39 
+6              1723            24 HUMAN_OBSERVA~ total                     1.39 
+7              1723            11 HUMAN_OBSERVA~ commercial use~           0.638
+8              1723            10 PRESERVED_SPE~ only non-comme~           0.580
+```
+
+* 30% with images (preserved specimen)
+* 530 of 1723 species (preserved specimen)
+* 26% commercial use allowed (preserved specimen)
+* Might be a lot of specimen labels
+
+https://www.gbif.org/occurrence/gallery?basis_of_record=PRESERVED_SPECIMEN&media_type=StillImage&taxon_key=6540
+
+# Bivalves
+
+137
+
+```
+   totalSpeciesWorld numWithImages basisOfRecord  license        percentCoverage
+               <int>         <int> <chr>          <chr>                    <dbl>
+ 1             26436          2431 FOSSIL_SPECIM~ total                   9.20  
+ 2             26436          2382 PRESERVED_SPE~ total                   9.01  
+ 3             26436          1516 PRESERVED_SPE~ commercial us~          5.73  
+ 4             26436          1203 FOSSIL_SPECIM~ commercial us~          4.55  
+ 5             26436           878 HUMAN_OBSERVA~ total                   3.32  
+ 6             26436           810 HUMAN_OBSERVA~ only non-comm~          3.06  
+ 7             26436           289 HUMAN_OBSERVA~ commercial us~          1.09  
+ 8             26436           107 PRESERVED_SPE~ only non-comm~          0.405 
+ 9             26436             7 UNKNOWN        only non-comm~          0.0265
+10             26436             7 UNKNOWN        total                   0.0265
+11             26436             4 FOSSIL_SPECIM~ only non-comm~          0.0151
+```
+* 10% with images (fossil)
+* 10% with images (preserved specimen)
+* 2382 of 26436 species
+* 5% commercial use allowed (preserved specimens)
+* Huge amount of species also with fossils, so situation might be better than table implies. Probably would be a hard dataset to use. 
+
+
+# Feather mosses
+
+https://www.gbif.org/occurrence/gallery?media_type=StillImage&taxon_key=617
+
+```
+  totalSpeciesWorld numWithImages basisOfRecord  license         percentCoverage
+              <int>         <int> <chr>          <chr>                     <dbl>
+1              7012          3365 PRESERVED_SPE~ total                    48.0  
+2              7012          2953 PRESERVED_SPE~ commercial use~          42.1  
+3              7012           759 PRESERVED_SPE~ only non-comme~          10.8  
+4              7012           202 HUMAN_OBSERVA~ total                     2.88 
+5              7012           137 HUMAN_OBSERVA~ only non-comme~           1.95 
+6              7012            47 HUMAN_OBSERVA~ commercial use~           0.670
+```
+
+* 48% with images (preserved specimen)
+* 3365 of 7012 species (preserved specimen)
+* 42% commercial use allowed (preserved specimen)
+* Might be a good dataset. A lot of preserved specimens. 
+
+
+# sharks 
+
+121
+https://www.gbif.org/occurrence/gallery?media_type=StillImage&taxon_key=121
+
+```
+   totalSpeciesWorld numWithImages basisOfRecord  license        percentCoverage
+               <int>         <int> <chr>          <chr>                    <dbl>
+ 1              1971           538 PRESERVED_SPE~ total                   27.3  
+ 2              1971           449 PRESERVED_SPE~ commercial us~          22.8  
+ 3              1971           347 HUMAN_OBSERVA~ total                   17.6  
+ 4              1971           298 HUMAN_OBSERVA~ only non-comm~          15.1  
+ 5              1971           157 HUMAN_OBSERVA~ commercial us~           7.97 
+ 6              1971           155 PRESERVED_SPE~ only non-comm~           7.86 
+ 7              1971            43 FOSSIL_SPECIM~ total                    2.18 
+ 8              1971            29 FOSSIL_SPECIM~ commercial us~           1.47 
+ 9              1971             9 FOSSIL_SPECIM~ only non-comm~           0.457
+10              1971             7 UNKNOWN        total                    0.355
+11              1971             4 UNKNOWN        commercial us~           0.203
+12              1971             3 UNKNOWN        only non-comm~           0.152
+```
+
+* 27% with images (preserved specimen)
+* 538 of 1971 species
+* 22% allowing for commercial use
+ 
+
+# Future Directions
+
+*  Probably we need looking at the GENUS level would yield better coverage for all groups, might be more realistic. 
+* Preserved specimen labels might be an issue
+
+# Comments about GBIF images data
+* There are 3x as many preserved specimen (10M) as human observation (30M) images. So we should expect any analysis to quite frequently only give us good coverage for preserved specimens. 
+
+
+# top 3 dataset possibilities
+
+Any bird! 
+
+1. ants (4342) 64%, 1% commercial use allowed
+  
+  Cons: 
+  * need to solve license issue
+  * preserved specimens
+  
+2. feather mosses (617) 48%, 42% commerical use allowed
+  
+  Cons:
+  * preserved specimens 
+
+3. swallowtail butterflies (9417) 62%, 42% commericial use allowed 
+	
+	Pros: 
+	* 38% with human observation
+	* Only 50% of butterflies have occurrences anyway
+	Cons: 
+	* preserved specimens 
+
+4. venomous snake family elapidae (9455) 43%, 16% commercial use allowed 
+
+  Pros: 
+  * human observation
+	Cons: 
+	* commercial use 
+	* venomous
+	
+5. sharks (121) 27%, 22% commerical use allowed
+
+https://www.gbif.org/occurrence/gallery?media_type=StillImage&taxon_key=121
+
+  Pros: 
+  * they are sharks
+  * fish
+  * commercial use allowed 
+  Cons
+  * preserved specimens 
+  
+
