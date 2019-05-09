@@ -163,7 +163,7 @@ https://www.gbif.org/occurrence/gallery?media_type=StillImage&taxon_key=4342
 * well above average for insects which is 50% 
 * Only 1% of ants species allow for commercial use (preserved specimen)
 
-# Spider 
+# Spiders
 
 https://www.gbif.org/occurrence/gallery?media_type=StillImage&taxon_key=1496
 
@@ -274,7 +274,7 @@ https://www.gbif.org/occurrence/gallery?media_type=StillImage&taxon_key=789
 
 * 20% of dragonflies have images (human observation)
 * 10% commercial use allowed (human observation)
-* 1450 sp with images out of 7040 
+* 1450 of 7040 species
 
 Numbers might be slightly better since dragonflies have 227 427 occurrences with images
 
@@ -367,7 +367,7 @@ https://www.gbif.org/occurrence/gallery?media_type=StillImage&taxon_key=1048
 * 10% with images (human obs)
 
 
-# great apes
+# Great apes
 
 https://www.gbif.org/occurrence/gallery?media_type=StillImage&taxon_key=5483
 
@@ -454,7 +454,7 @@ https://www.gbif.org/occurrence/gallery?media_type=StillImage&taxon_key=7782
 * 228 of 2059 (human observation)
 * 5% commercial use allowed (human observation)
 
-# land snails
+# Land snails
 
 https://www.gbif.org/occurrence/gallery?media_type=StillImage&taxon_key=6540
 
@@ -525,7 +525,7 @@ https://www.gbif.org/occurrence/gallery?media_type=StillImage&taxon_key=617
 * Might be a good dataset. A lot of preserved specimens. 
 
 
-# sharks 
+# Sharks 
 
 https://www.gbif.org/occurrence/gallery?media_type=StillImage&taxon_key=121
 
