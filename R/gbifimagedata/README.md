@@ -117,6 +117,22 @@ This should produce a table looking close to this:
 * lists of taxonKeys. 
 * make total group for basisOfRecord 
 
+# Future Directions
+
+*  Probably we need looking at the GENUS level would yield better coverage for all groups, might be more realistic. 
+* Preserved specimen labels might be an issue
+
+# Comments about GBIF images data
+* There are 3x as many preserved specimen (10M) as human observation (30M) images. So we should expect any analysis to quite frequently only give us good coverage for preserved specimens. 
+
+
+# top dataset possibilities
+
+1. swallowtail butterflies (9417)
+2. bats (734)
+3. Beech and Oak Tree Family (4689)
+4. Ants (4342)
+
 # Hummingbirds 
 
 https://www.gbif.org/occurrence/gallery?media_type=StillImage&taxon_key=5289
@@ -625,20 +641,6 @@ https://www.gbif.org/occurrence/gallery?media_type=StillImage&taxon_key=121
 * 22% allowing for commercial use
  
 
-# Future Directions
 
-*  Probably we need looking at the GENUS level would yield better coverage for all groups, might be more realistic. 
-* Preserved specimen labels might be an issue
-
-# Comments about GBIF images data
-* There are 3x as many preserved specimen (10M) as human observation (30M) images. So we should expect any analysis to quite frequently only give us good coverage for preserved specimens. 
-
-
-# top dataset possibilities
-
-1. swallowtail butterflies (9417)
-2. bats (734)
-3. Beech and Oak Tree Family (4689)
-4. Ants (4342)
   
 
