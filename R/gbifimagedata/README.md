@@ -121,27 +121,6 @@ This should produce a table looking close to this:
 
 [hummingbird images on GBIF](https://www.gbif.org/occurrence/gallery?media_type=StillImage&taxon_key=5289&advanced=1)
 
-
-```
-saveDir = "C:/Users/ftw712/Desktop/image data friendly taxa/data/hummingbirds/"
-
-getImageData(friendlyName="hummingbirds",friendlyKey="5289",Step=100,maxPages=2000) %>% 
-saveData(saveDir,fileName="imageData.rda") %>% # save the data from the most expensive step
-loadData(saveDir=saveDir,fileName="imageData.rda") %>% # load that data from disk
-filter(taxonomicStatus == "ACCEPTED") %>% # get only ACCEPTED species
-filter(rank == "SPECIES") %>% # only get for Rank SPECIES
-addLicenseTranslation() %>%
-summariseTable() %>%
-filter(imageCount >= 1) %>% # only get species with more than n images
-groupSummarise() %>%
-filter(country == "world") %>% 
-addPercentCoverage(globalOnly=TRUE) %>%
-addWorldPercentage() %>% # adds through a different api
-select(friendlyName,country,basisOfRecord,license,percentCoverage) %>%  
-arrange(-percentCoverage,license)
-
-```
-
 ```
 
   friendlyName country basisOfRecord     license                 percentCoverage
@@ -160,28 +139,6 @@ arrange(-percentCoverage,license)
 # Ants analysis 
 
 [ant images on GBIF](https://www.gbif.org/occurrence/gallery?media_type=StillImage&taxon_key=4342&advanced=1)
-
-```
-library(gbifimagedata)
-library(dplyr)
-
-saveDir = "C:/Users/ftw712/Desktop/image data friendly taxa/data/ants/"
-
-getImageData(friendlyName="ants",friendlyKey="4342",Step=100,maxPages=2000) %>% 
-saveData(saveDir,fileName="imageData.rda") %>% # save the data from the most expensive step
-loadData(saveDir=saveDir,fileName="imageData.rda") %>% # load that data from disk
-filter(taxonomicStatus == "ACCEPTED") %>% # get only ACCEPTED species
-filter(rank == "SPECIES") %>% # only get for Rank SPECIES
-addLicenseTranslation() %>%
-summariseTable() %>%
-filter(imageCount >= 1) %>% # only get species with more than n images
-groupSummarise() %>%
-filter(country == "world") %>% 
-addPercentCoverage(globalOnly=TRUE) %>%
-addWorldPercentage() %>% # adds through a different api
-select(friendlyName,country,basisOfRecord,license,percentCoverage) %>%  
-arrange(-percentCoverage,license)
-```
 
 
 ```
@@ -209,28 +166,6 @@ arrange(-percentCoverage,license)
 [spider images](https://www.gbif.org/occurrence/gallery?media_type=StillImage&taxon_key=1496)
 
 ```
-library(gbifimagedata)
-library(dplyr)
-
-saveDir = "C:/Users/ftw712/Desktop/image data friendly taxa/data/spiders/"
-
-getImageData(friendlyName="spiders",friendlyKey="1496",Step=100,maxPages=2000) %>% 
-saveData(saveDir,fileName="imageData.rda") %>% # save the data from the most expensive step
-loadData(saveDir=saveDir,fileName="imageData.rda") %>% # load that data from disk
-filter(taxonomicStatus == "ACCEPTED") %>% # get only ACCEPTED species
-filter(rank == "SPECIES") %>% # only get for Rank SPECIES
-addLicenseTranslation() %>%
-summariseTable() %>%
-filter(imageCount >= 1) %>% # only get species with more than n images
-groupSummarise() %>%
-filter(country == "world") %>% 
-addPercentCoverage(globalOnly=TRUE) %>%
-addWorldPercentage() %>% # adds through a different api
-select(friendlyName,country,basisOfRecord,license,percentCoverage) %>%  
-arrange(-percentCoverage,license)
-```
-
-```
    friendlyName country basisOfRecord     license                percentCoverage
    <chr>        <chr>   <chr>             <chr>                            <dbl>
  1 spiders      world   HUMAN_OBSERVATION total                           5.06  
@@ -252,32 +187,6 @@ arrange(-percentCoverage,license)
 * 2508 species with images 
 
 # Swallowtail butterflies 
-
-```
-
-library(gbifimagedata)
-library(dplyr)
-
-saveDir = "C:/Users/ftw712/Desktop/image data friendly taxa/data/swallowtail butterflies/"
-
-getImageData(friendlyName="swallowtail butterflies",friendlyKey="9417",Step=100,maxPages=2000) %>% 
-saveData(saveDir,fileName="imageData.rda") %>% # save the data from the most expensive step
-loadData(saveDir=saveDir,fileName="imageData.rda") %>% # load that data from disk
-filter(taxonomicStatus == "ACCEPTED") %>% # get only ACCEPTED species
-filter(rank == "SPECIES") %>% # only get for Rank SPECIES
-addLicenseTranslation() %>%
-summariseTable() %>%
-filter(imageCount >= 1) %>% # only get species with more than n images
-groupSummarise() %>%
-filter(country == "world") %>% 
-addPercentCoverage(globalOnly=TRUE) %>%
-addWorldPercentage() %>% # adds through a different api
-select(friendlyName,country,basisOfRecord,license,percentCoverage,numSpeciesWithImages) %>%  
-print() %>% 
-select(friendlyName,country,basisOfRecord,license,percentCoverage) %>%  
-arrange(-percentCoverage,license)
-
-```
 
 ```
    friendlyName       country basisOfRecord   license            percentCoverage
