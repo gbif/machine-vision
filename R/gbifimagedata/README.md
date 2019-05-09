@@ -168,25 +168,72 @@ https://www.gbif.org/occurrence/gallery?media_type=StillImage&taxon_key=4342
 https://www.gbif.org/occurrence/gallery?media_type=StillImage&taxon_key=1496
 
 ```
-   friendlyName country basisOfRecord     license                percentCoverage
-   <chr>        <chr>   <chr>             <chr>                            <dbl>
- 1 spiders      world   HUMAN_OBSERVATION total                           5.06  
- 2 spiders      world   HUMAN_OBSERVATION only non-commercial u~          4.26  
- 3 spiders      world   PRESERVED_SPECIM~ total                           1.98  
- 4 spiders      world   PRESERVED_SPECIM~ only non-commercial u~          1.86  
- 5 spiders      world   HUMAN_OBSERVATION commercial use allowed          1.65  
- 6 spiders      world   UNKNOWN           total                           1.22  
- 7 spiders      world   UNKNOWN           only non-commercial u~          1.21  
- 8 spiders      world   UNKNOWN           commercial use allowed          0.115 
- 9 spiders      world   FOSSIL_SPECIMEN   total                           0.0948
-10 spiders      world   FOSSIL_SPECIMEN   commercial use allowed          0.0726
-11 spiders      world   MATERIAL_SAMPLE   only non-commercial u~          0.0242
-12 spiders      world   MATERIAL_SAMPLE   total                           0.0242
-13 spiders      world   FOSSIL_SPECIMEN   only non-commercial u~          0.0222
-14 spiders      world   PRESERVED_SPECIM~ commercial use allowed          0.0202
+   totalSpeciesWorld numWithImages basisOfRecord  license        percentCoverage
+               <int>         <int> <chr>          <chr>                    <dbl>
+ 1             49560          2508 HUMAN_OBSERVA~ total                   5.06  
+ 2             49560          2113 HUMAN_OBSERVA~ only non-comm~          4.26  
+ 3             49560           981 PRESERVED_SPE~ total                   1.98  
+ 4             49560           921 PRESERVED_SPE~ only non-comm~          1.86  
+ 5             49560           818 HUMAN_OBSERVA~ commercial us~          1.65  
+ 6             49560           603 UNKNOWN        total                   1.22  
+ 7             49560           598 UNKNOWN        only non-comm~          1.21  
+ 8             49560            57 UNKNOWN        commercial us~          0.115 
+ 9             49560            47 FOSSIL_SPECIM~ total                   0.0948
+10             49560            36 FOSSIL_SPECIM~ commercial us~          0.0726
+11             49560            12 MATERIAL_SAMP~ only non-comm~          0.0242
+12             49560            12 MATERIAL_SAMP~ total                   0.0242
+13             49560            11 FOSSIL_SPECIM~ only non-comm~          0.0222
+14             49560            10 PRESERVED_SPE~ commercial us~          0.0202
 ```
+
 * Only 5% of spiders have 1 or more images 
-* 2508 species with images 
+* 2508 of 49560 species with images 
+* Although percentage is low, almost all are human observation. 
+
+# orb-weaving spiders
+
+https://www.gbif.org/occurrence/gallery?media_type=StillImage&taxon_key=7359
+
+```
+  totalSpeciesWorld numWithImages basisOfRecord  license         percentCoverage
+              <int>         <int> <chr>          <chr>                     <dbl>
+1              3208           409 HUMAN_OBSERVA~ total                   12.7   
+2              3208           392 HUMAN_OBSERVA~ only non-comme~         12.2   
+3              3208           158 HUMAN_OBSERVA~ commercial use~          4.93  
+4              3208            11 PRESERVED_SPE~ total                    0.343 
+5              3208            10 PRESERVED_SPE~ only non-comme~          0.312 
+6              3208             3 UNKNOWN        only non-comme~          0.0935
+7              3208             3 UNKNOWN        total                    0.0935
+
+```
+
+* 12% with images (human observation)
+* 409 of 3208 species 
+* Only 4% allow for commercial use (human observation)
+
+
+# Scorpions 
+
+https://www.gbif.org/occurrence/gallery?media_type=StillImage&taxon_key=872
+
+```   
+   totalSpeciesWorld numWithImages basisOfRecord  license        percentCoverage
+               <int>         <int> <chr>          <chr>                    <dbl>
+ 1              2502           307 HUMAN_OBSERVA~ total                   12.3  
+ 2              2502           294 HUMAN_OBSERVA~ only non-comm~          11.8  
+ 3              2502           159 PRESERVED_SPE~ total                    6.35 
+ 4              2502            56 HUMAN_OBSERVA~ commercial us~           2.24 
+ 5              2502            35 PRESERVED_SPE~ only non-comm~           1.40 
+ 6              2502             8 FOSSIL_SPECIM~ commercial us~           0.320
+ 7              2502             8 FOSSIL_SPECIM~ total                    0.320
+ 8              2502             6 PRESERVED_SPE~ commercial us~           0.240
+ 9              2502             6 UNKNOWN        only non-comm~           0.240
+10              2502             6 UNKNOWN        total                    0.240
+```
+
+* 12% with images (human obs)
+* 294 of 2502 species
+* 2% commercial use allowed (human obs)
 
 # Swallowtail butterflies 
 
@@ -211,7 +258,7 @@ https://www.gbif.org/occurrence/gallery?basis_of_record=PRESERVED_SPECIMEN&media
 * 62% of swallowtail butterflies have 1 or more images (preserved specimen) 
 * 421 species with images
 * 42% with commerical use allowed (preserved specimen)
-* A lot of museum drawers full of butterflies 
+* A lot of museum drawers full of butterflies!
 
 # Primates 
 
@@ -278,7 +325,34 @@ https://www.gbif.org/occurrence/gallery?media_type=StillImage&taxon_key=789
 
 Numbers might be slightly better since dragonflies have 227 427 occurrences with images
 
-# venomous snake family Elapidae
+# dragonfly family libellulidae
+
+https://www.gbif.org/occurrence/gallery?media_type=StillImage&taxon_key=5936
+
+
+```
+   totalSpeciesWorld numWithImages basisOfRecord  license        percentCoverage
+               <int>         <int> <chr>          <chr>                    <dbl>
+ 1              1106           442 HUMAN_OBSERVA~ total                  40.0   
+ 2              1106           426 HUMAN_OBSERVA~ only non-comm~         38.5   
+ 3              1106           281 PRESERVED_SPE~ total                  25.4   
+ 4              1106           241 HUMAN_OBSERVA~ commercial us~         21.8   
+ 5              1106            92 PRESERVED_SPE~ commercial us~          8.32  
+ 6              1106            21 PRESERVED_SPE~ only non-comm~          1.90  
+ 7              1106             9 FOSSIL_SPECIM~ total                   0.814 
+ 8              1106             8 FOSSIL_SPECIM~ commercial us~          0.723 
+ 9              1106             1 FOSSIL_SPECIM~ only non-comm~          0.0904
+10              1106             1 UNKNOWN        only non-comm~          0.0904
+11              1106             1 UNKNOWN        total                   0.0904
+```
+
+* 40% with images(human obs)
+* 21% commericial use 
+
+
+
+
+# Venomous snake family Elapidae
 
 https://www.gbif.org/occurrence/gallery?media_type=StillImage&taxon_key=9455
 
@@ -560,46 +634,11 @@ https://www.gbif.org/occurrence/gallery?media_type=StillImage&taxon_key=121
 * There are 3x as many preserved specimen (10M) as human observation (30M) images. So we should expect any analysis to quite frequently only give us good coverage for preserved specimens. 
 
 
-# top 3 dataset possibilities
+# top dataset possibilities
 
-Any bird! 
-
-1. ants (4342) 64%, 1% commercial use allowed
-  
-  Cons: 
-  * need to solve license issue
-  * preserved specimens
-  
-2. feather mosses (617) 48%, 42% commerical use allowed
-  
-  Cons:
-  * preserved specimens 
-
-3. swallowtail butterflies (9417) 62%, 42% commericial use allowed 
-	
-	Pros: 
-	* 38% with human observation
-	* Only 50% of butterflies have occurrences anyway
-	Cons: 
-	* preserved specimens 
-
-4. venomous snake family elapidae (9455) 43%, 16% commercial use allowed 
-
-  Pros: 
-  * human observation
-	Cons: 
-	* commercial use 
-	* venomous
-	
-5. sharks (121) 27%, 22% commerical use allowed
-
-https://www.gbif.org/occurrence/gallery?media_type=StillImage&taxon_key=121
-
-  Pros: 
-  * they are sharks
-  * fish
-  * commercial use allowed 
-  Cons
-  * preserved specimens 
+1. swallowtail butterflies (9417)
+2. bats (734)
+3. Beech and Oak Tree Family (4689)
+4. Ants (4342)
   
 
