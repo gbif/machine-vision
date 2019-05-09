@@ -282,6 +282,26 @@ https://www.gbif.org/occurrence/gallery?media_type=StillImage&taxon_key=5936
 * 21% commericial use 
 * 442 of 1106 species
 
+# Feather mosses
+
+https://www.gbif.org/occurrence/gallery?media_type=StillImage&taxon_key=617
+
+```
+  totalSpeciesWorld numWithImages basisOfRecord  license         percentCoverage
+              <int>         <int> <chr>          <chr>                     <dbl>
+1              7012          3365 PRESERVED_SPE~ total                    48.0  
+2              7012          2953 PRESERVED_SPE~ commercial use~          42.1  
+3              7012           759 PRESERVED_SPE~ only non-comme~          10.8  
+4              7012           202 HUMAN_OBSERVA~ total                     2.88 
+5              7012           137 HUMAN_OBSERVA~ only non-comme~           1.95 
+6              7012            47 HUMAN_OBSERVA~ commercial use~           0.670
+```
+
+* 48% with images (preserved specimen)
+* 3365 of 7012 species (preserved specimen)
+* 42% commercial use allowed (preserved specimen)
+* Might be a good dataset. A lot of preserved specimens.
+
 # Spiders
 
 https://www.gbif.org/occurrence/gallery?media_type=StillImage&taxon_key=1496
@@ -602,25 +622,7 @@ https://www.gbif.org/occurrence/gallery?media_type=StillImage&taxon_key=137
 * Huge amount of species also with fossils, so situation might be better than table implies. Probably would be a hard dataset to use. 
 
 
-# Feather mosses
-
-https://www.gbif.org/occurrence/gallery?media_type=StillImage&taxon_key=617
-
-```
-  totalSpeciesWorld numWithImages basisOfRecord  license         percentCoverage
-              <int>         <int> <chr>          <chr>                     <dbl>
-1              7012          3365 PRESERVED_SPE~ total                    48.0  
-2              7012          2953 PRESERVED_SPE~ commercial use~          42.1  
-3              7012           759 PRESERVED_SPE~ only non-comme~          10.8  
-4              7012           202 HUMAN_OBSERVA~ total                     2.88 
-5              7012           137 HUMAN_OBSERVA~ only non-comme~           1.95 
-6              7012            47 HUMAN_OBSERVA~ commercial use~           0.670
-```
-
-* 48% with images (preserved specimen)
-* 3365 of 7012 species (preserved specimen)
-* 42% commercial use allowed (preserved specimen)
-* Might be a good dataset. A lot of preserved specimens. 
+ 
 
 
 # Sharks 
