@@ -117,53 +117,55 @@ This should produce a table looking close to this:
 * lists of taxonKeys. 
 * make total group for basisOfRecord 
 
-# Hummingbirds analysis
+# Hummingbirds 
 
-[hummingbird images on GBIF](https://www.gbif.org/occurrence/gallery?media_type=StillImage&taxon_key=5289&advanced=1)
+https://www.gbif.org/occurrence/gallery?media_type=StillImage&taxon_key=5289
 
 ```
-
-  friendlyName country basisOfRecord     license                 percentCoverage
-  <chr>        <chr>   <chr>             <chr>                             <dbl>
-1 hummingbirds world   HUMAN_OBSERVATION total                             53.3 
-2 hummingbirds world   HUMAN_OBSERVATION only non-commercial us~           51.2 
-3 hummingbirds world   PRESERVED_SPECIM~ total                             42.9 
-4 hummingbirds world   PRESERVED_SPECIM~ commercial use allowed            39.9 
-5 hummingbirds world   HUMAN_OBSERVATION commercial use allowed            23.0 
-6 hummingbirds world   PRESERVED_SPECIM~ only non-commercial us~            5.23
+  totalSpeciesWorld numWithImages basisOfRecord  license         percentCoverage
+              <int>         <int> <chr>          <chr>                     <dbl>
+1               574           306 HUMAN_OBSERVA~ total                     53.3 
+2               574           294 HUMAN_OBSERVA~ only non-comme~           51.2 
+3               574           243 PRESERVED_SPE~ total                     42.3 
+4               574           227 PRESERVED_SPE~ commercial use~           39.5 
+5               574           133 HUMAN_OBSERVA~ commercial use~           23.2 
+6               574            30 PRESERVED_SPE~ only non-comme~            5.23
 ```
 
 * %53 of hummingbirds have at least 1 image (human obs)
+* 306 of 574 species
 * %23 of hummingbirds species allow for commercial usage (human obs)
 
-# Ants analysis 
+# Ants  
 
-[ant images on GBIF](https://www.gbif.org/occurrence/gallery?media_type=StillImage&taxon_key=4342&advanced=1)
+https://www.gbif.org/occurrence/gallery?media_type=StillImage&taxon_key=4342
 
 
 ```
-   friendlyName country basisOfRecord     license                percentCoverage
-   <chr>        <chr>   <chr>             <chr>                            <dbl>
- 1 ants         world   PRESERVED_SPECIM~ total                           61.4  
- 2 ants         world   PRESERVED_SPECIM~ only non-commercial u~          61.2  
- 3 ants         world   HUMAN_OBSERVATION total                            5.00 
- 4 ants         world   HUMAN_OBSERVATION only non-commercial u~           4.64 
- 5 ants         world   HUMAN_OBSERVATION commercial use allowed           1.74 
- 6 ants         world   PRESERVED_SPECIM~ commercial use allowed           1.13 
- 7 ants         world   UNKNOWN           total                            1.13 
- 8 ants         world   UNKNOWN           only non-commercial u~           1.01 
- 9 ants         world   FOSSIL_SPECIMEN   total                            0.489
-10 ants         world   FOSSIL_SPECIMEN   only non-commercial u~           0.407
-11 ants         world   FOSSIL_SPECIMEN   commercial use allowed           0.230
-12 ants         world   UNKNOWN           commercial use allowed           0.141
+   totalSpeciesWorld numWithImages basisOfRecord  license        percentCoverage
+               <int>         <int> <chr>          <chr>                    <dbl>
+ 1             13504          8290 PRESERVED_SPE~ total                   61.4  
+ 2             13504          8270 PRESERVED_SPE~ only non-comm~          61.2  
+ 3             13504           675 HUMAN_OBSERVA~ total                    5.00 
+ 4             13504           626 HUMAN_OBSERVA~ only non-comm~           4.64 
+ 5             13504           235 HUMAN_OBSERVA~ commercial us~           1.74 
+ 6             13504           152 PRESERVED_SPE~ commercial us~           1.13 
+ 7             13504           152 UNKNOWN        total                    1.13 
+ 8             13504           136 UNKNOWN        only non-comm~           1.01 
+ 9             13504            66 FOSSIL_SPECIM~ total                    0.489
+10             13504            55 FOSSIL_SPECIM~ only non-comm~           0.407
+11             13504            31 FOSSIL_SPECIM~ commercial us~           0.230
+12             13504            19 UNKNOWN        commercial us~           0.141
 ```
 
 * 64% of ants have 1 or more images (preserved specimen)
+* 8290 of 13504 species
+* well above average for insects which is 50% 
 * Only 1% of ants species allow for commercial use (preserved specimen)
 
-# Spider analysis
+# Spider 
 
-[spider images](https://www.gbif.org/occurrence/gallery?media_type=StillImage&taxon_key=1496)
+https://www.gbif.org/occurrence/gallery?media_type=StillImage&taxon_key=1496
 
 ```
    friendlyName country basisOfRecord     license                percentCoverage
@@ -188,6 +190,8 @@ This should produce a table looking close to this:
 
 # Swallowtail butterflies 
 
+https://www.gbif.org/occurrence/gallery?basis_of_record=PRESERVED_SPECIMEN&media_type=StillImage&taxon_key=9417
+
 ```
    friendlyName       country basisOfRecord   license            percentCoverage
    <chr>              <chr>   <chr>           <chr>                        <dbl>
@@ -207,11 +211,11 @@ This should produce a table looking close to this:
 * 62% of swallowtail butterflies have 1 or more images (preserved specimen) 
 * 421 species with images
 * 42% with commerical use allowed (preserved specimen)
-* A lot of museum drawers full of butterflies [images](https://www.gbif.org/occurrence/gallery?basis_of_record=PRESERVED_SPECIMEN&media_type=StillImage&taxon_key=9417)
+* A lot of museum drawers full of butterflies 
 
 # Primates 
 
-taxonkey = 798
+https://www.gbif.org/occurrence/gallery?media_type=StillImage&taxon_key=798
 
 ```
   totalSpeciesWorld numWithImages basisOfRecord  license         percentCoverage
@@ -233,7 +237,7 @@ taxonkey = 798
 
 # Rodents
 
-taxonkey = 1459
+https://www.gbif.org/occurrence/gallery?media_type=StillImage&taxon_key=1459
 
 ```
 totalSpeciesWorld numWithImages basisOfRecord  license         percentCoverage
@@ -255,7 +259,7 @@ totalSpeciesWorld numWithImages basisOfRecord  license         percentCoverage
 
 # Dragonflies 
 
-taxonkey = 789
+https://www.gbif.org/occurrence/gallery?media_type=StillImage&taxon_key=789
 
 ```
   totalSpeciesWorld numWithImages basisOfRecord  license         percentCoverage
@@ -276,7 +280,7 @@ Numbers might be slightly better since dragonflies have 227 427 occurrences with
 
 # venomous snake family Elapidae
 
-taxonkey = 9455
+https://www.gbif.org/occurrence/gallery?media_type=StillImage&taxon_key=9455
 
 ```
 1               398           173 HUMAN_OBSERVA~ total                     43.5 
@@ -295,7 +299,7 @@ taxonkey = 9455
 
 # Cactus
 
-taxonkey=2519
+https://www.gbif.org/occurrence/gallery?media_type=StillImage&taxon_key=2519
 
 ```
 totalSpeciesWorld numWithImages basisOfRecord  license        percentCoverage
@@ -315,7 +319,7 @@ totalSpeciesWorld numWithImages basisOfRecord  license        percentCoverage
 
 # Beech and Oak Tree Family 
 
-taxonkey=4689
+https://www.gbif.org/occurrence/gallery?media_type=StillImage&taxon_key=4689
 
 ```
    totalSpeciesWorld numWithImages basisOfRecord  license        percentCoverage
@@ -341,7 +345,7 @@ taxonkey=4689
 
 # Lichens
 
-taxonkey=1048
+https://www.gbif.org/occurrence/gallery?media_type=StillImage&taxon_key=1048
 
 ```
   totalSpeciesWorld numWithImages basisOfRecord  license         percentCoverage
@@ -365,7 +369,7 @@ taxonkey=1048
 
 # great apes
 
-5483
+https://www.gbif.org/occurrence/gallery?media_type=StillImage&taxon_key=5483
 
 ```
   totalSpeciesWorld numWithImages basisOfRecord  license         percentCoverage
@@ -383,7 +387,7 @@ taxonkey=1048
 
 # Bats
 
-734
+https://www.gbif.org/occurrence/gallery?media_type=StillImage&taxon_key=734
 
 ```
    totalSpeciesWorld numWithImages basisOfRecord  license        percentCoverage
@@ -408,7 +412,7 @@ taxonkey=1048
 
 # Rabbits
 
-785
+https://www.gbif.org/occurrence/gallery?media_type=StillImage&taxon_key=785
 
 ```
   totalSpeciesWorld numWithImages basisOfRecord  license         percentCoverage
@@ -428,7 +432,7 @@ taxonkey=1048
 
 # Ladybugs/Ladybirds
 
-7782
+https://www.gbif.org/occurrence/gallery?media_type=StillImage&taxon_key=7782
 
 ```
    totalSpeciesWorld numWithImages basisOfRecord  license        percentCoverage
@@ -452,7 +456,7 @@ taxonkey=1048
 
 # land snails
 
-6540
+https://www.gbif.org/occurrence/gallery?media_type=StillImage&taxon_key=6540
 
 ```
   totalSpeciesWorld numWithImages basisOfRecord  license         percentCoverage
@@ -476,7 +480,7 @@ https://www.gbif.org/occurrence/gallery?basis_of_record=PRESERVED_SPECIMEN&media
 
 # Bivalves
 
-137
+https://www.gbif.org/occurrence/gallery?media_type=StillImage&taxon_key=137
 
 ```
    totalSpeciesWorld numWithImages basisOfRecord  license        percentCoverage
@@ -523,7 +527,6 @@ https://www.gbif.org/occurrence/gallery?media_type=StillImage&taxon_key=617
 
 # sharks 
 
-121
 https://www.gbif.org/occurrence/gallery?media_type=StillImage&taxon_key=121
 
 ```
