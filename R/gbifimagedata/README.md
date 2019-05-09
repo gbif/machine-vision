@@ -128,6 +128,8 @@ This should produce a table looking close to this:
 
 # top dataset possibilities
 
+Any bird. 
+
 1. swallowtail butterflies (9417)
 2. bats (734)
 3. Beech and Oak Tree Family (4689)
@@ -151,6 +153,56 @@ https://www.gbif.org/occurrence/gallery?media_type=StillImage&taxon_key=5289
 * %53 of hummingbirds have at least 1 image (human obs)
 * 306 of 574 species
 * %23 of hummingbirds species allow for commercial usage (human obs)
+
+
+# Swallowtail butterflies 
+
+https://www.gbif.org/occurrence/gallery?basis_of_record=PRESERVED_SPECIMEN&media_type=StillImage&taxon_key=9417
+
+```
+   friendlyName       country basisOfRecord   license            percentCoverage
+   <chr>              <chr>   <chr>           <chr>                        <dbl>
+ 1 swallowtail butte~ world   PRESERVED_SPEC~ total                       62.7  
+ 2 swallowtail butte~ world   PRESERVED_SPEC~ commercial use al~          42.2  
+ 3 swallowtail butte~ world   HUMAN_OBSERVAT~ total                       38.2  
+ 4 swallowtail butte~ world   HUMAN_OBSERVAT~ only non-commerci~          36.8  
+ 5 swallowtail butte~ world   PRESERVED_SPEC~ only non-commerci~          26.8  
+ 6 swallowtail butte~ world   HUMAN_OBSERVAT~ commercial use al~          15.8  
+ 7 swallowtail butte~ world   UNKNOWN         total                        4.77 
+ 8 swallowtail butte~ world   UNKNOWN         only non-commerci~           3.58 
+ 9 swallowtail butte~ world   UNKNOWN         commercial use al~           1.64 
+10 swallowtail butte~ world   FOSSIL_SPECIMEN commercial use al~           0.149
+11 swallowtail butte~ world   FOSSIL_SPECIMEN total                        0.149
+```
+
+* 62% of swallowtail butterflies have 1 or more images (preserved specimen) 
+* 421 species with images
+* 42% with commerical use allowed (preserved specimen)
+* A lot of museum drawers full of butterflies!
+
+# Bats
+
+https://www.gbif.org/occurrence/gallery?media_type=StillImage&taxon_key=734
+
+```
+   totalSpeciesWorld numWithImages basisOfRecord  license        percentCoverage
+               <int>         <int> <chr>          <chr>                    <dbl>
+ 1              1592           514 PRESERVED_SPE~ total                   32.3  
+ 2              1592           470 HUMAN_OBSERVA~ total                   29.5  
+ 3              1592           449 HUMAN_OBSERVA~ only non-comm~          28.2  
+ 4              1592           316 PRESERVED_SPE~ commercial us~          19.8  
+ 5              1592           105 PRESERVED_SPE~ only non-comm~           6.60 
+ 6              1592           100 HUMAN_OBSERVA~ commercial us~           6.28 
+ 7              1592             2 FOSSIL_SPECIM~ commercial us~           0.126
+ 8              1592             2 UNKNOWN        only non-comm~           0.126
+ 9              1592             2 FOSSIL_SPECIM~ total                    0.126
+10              1592             2 UNKNOWN        total                    0.126
+```
+ 
+* 32% with images (preserved specimen)
+* 514 of 1592 (preserved specimen)
+* 19% commercial use allowed (preserved specimen)
+* 28% with images (human observation)
 
 # Ants  
 
@@ -178,6 +230,32 @@ https://www.gbif.org/occurrence/gallery?media_type=StillImage&taxon_key=4342
 * 8290 of 13504 species
 * well above average for insects which is 50% 
 * Only 1% of ants species allow for commercial use (preserved specimen)
+
+# Beech and Oak Tree Family 
+
+https://www.gbif.org/occurrence/gallery?media_type=StillImage&taxon_key=4689
+
+```
+   totalSpeciesWorld numWithImages basisOfRecord  license        percentCoverage
+               <int>         <int> <chr>          <chr>                    <dbl>
+ 1              1478           931 PRESERVED_SPE~ total                   63.0  
+ 2              1478           787 PRESERVED_SPE~ commercial us~          53.2  
+ 3              1478           404 PRESERVED_SPE~ only non-comm~          27.3  
+ 4              1478           244 HUMAN_OBSERVA~ total                   16.5  
+ 5              1478           240 HUMAN_OBSERVA~ only non-comm~          16.2  
+ 6              1478           105 HUMAN_OBSERVA~ commercial us~           7.10 
+ 7              1478            32 FOSSIL_SPECIM~ total                    2.17 
+ 8              1478            30 FOSSIL_SPECIM~ commercial us~           2.03 
+ 9              1478            11 LIVING_SPECIM~ only non-comm~           0.744
+10              1478            11 LIVING_SPECIM~ total                    0.744
+11              1478             2 OBSERVATION    only non-comm~           0.135
+12              1478             2 OBSERVATION    total                    0.135
+
+```
+
+* 63% with images (preserved specimen)
+* 53% with commercial use allowed (preserved specimen)
+* 931 of 1478 species 
 
 # Spiders
 
@@ -251,30 +329,7 @@ https://www.gbif.org/occurrence/gallery?media_type=StillImage&taxon_key=872
 * 294 of 2502 species
 * 2% commercial use allowed (human obs)
 
-# Swallowtail butterflies 
 
-https://www.gbif.org/occurrence/gallery?basis_of_record=PRESERVED_SPECIMEN&media_type=StillImage&taxon_key=9417
-
-```
-   friendlyName       country basisOfRecord   license            percentCoverage
-   <chr>              <chr>   <chr>           <chr>                        <dbl>
- 1 swallowtail butte~ world   PRESERVED_SPEC~ total                       62.7  
- 2 swallowtail butte~ world   PRESERVED_SPEC~ commercial use al~          42.2  
- 3 swallowtail butte~ world   HUMAN_OBSERVAT~ total                       38.2  
- 4 swallowtail butte~ world   HUMAN_OBSERVAT~ only non-commerci~          36.8  
- 5 swallowtail butte~ world   PRESERVED_SPEC~ only non-commerci~          26.8  
- 6 swallowtail butte~ world   HUMAN_OBSERVAT~ commercial use al~          15.8  
- 7 swallowtail butte~ world   UNKNOWN         total                        4.77 
- 8 swallowtail butte~ world   UNKNOWN         only non-commerci~           3.58 
- 9 swallowtail butte~ world   UNKNOWN         commercial use al~           1.64 
-10 swallowtail butte~ world   FOSSIL_SPECIMEN commercial use al~           0.149
-11 swallowtail butte~ world   FOSSIL_SPECIMEN total                        0.149
-```
-
-* 62% of swallowtail butterflies have 1 or more images (preserved specimen) 
-* 421 species with images
-* 42% with commerical use allowed (preserved specimen)
-* A lot of museum drawers full of butterflies!
 
 # Primates 
 
@@ -407,31 +462,7 @@ totalSpeciesWorld numWithImages basisOfRecord  license        percentCoverage
 * 36% commercial use allowed (human observation)
 * 1063 of 1816 with images 
 
-# Beech and Oak Tree Family 
 
-https://www.gbif.org/occurrence/gallery?media_type=StillImage&taxon_key=4689
-
-```
-   totalSpeciesWorld numWithImages basisOfRecord  license        percentCoverage
-               <int>         <int> <chr>          <chr>                    <dbl>
- 1              1478           931 PRESERVED_SPE~ total                   63.0  
- 2              1478           787 PRESERVED_SPE~ commercial us~          53.2  
- 3              1478           404 PRESERVED_SPE~ only non-comm~          27.3  
- 4              1478           244 HUMAN_OBSERVA~ total                   16.5  
- 5              1478           240 HUMAN_OBSERVA~ only non-comm~          16.2  
- 6              1478           105 HUMAN_OBSERVA~ commercial us~           7.10 
- 7              1478            32 FOSSIL_SPECIM~ total                    2.17 
- 8              1478            30 FOSSIL_SPECIM~ commercial us~           2.03 
- 9              1478            11 LIVING_SPECIM~ only non-comm~           0.744
-10              1478            11 LIVING_SPECIM~ total                    0.744
-11              1478             2 OBSERVATION    only non-comm~           0.135
-12              1478             2 OBSERVATION    total                    0.135
-
-```
-
-* 63% with images (preserved specimen)
-* 53% with commercial use allowed (preserved specimen)
-* 931 of 1478 species 
 
 # Lichens
 
@@ -475,29 +506,7 @@ https://www.gbif.org/occurrence/gallery?media_type=StillImage&taxon_key=5483
 * Probably we have better coverage for this group than what is in the table since most of the family Hominidae is extinct. 
 
 
-# Bats
 
-https://www.gbif.org/occurrence/gallery?media_type=StillImage&taxon_key=734
-
-```
-   totalSpeciesWorld numWithImages basisOfRecord  license        percentCoverage
-               <int>         <int> <chr>          <chr>                    <dbl>
- 1              1592           514 PRESERVED_SPE~ total                   32.3  
- 2              1592           470 HUMAN_OBSERVA~ total                   29.5  
- 3              1592           449 HUMAN_OBSERVA~ only non-comm~          28.2  
- 4              1592           316 PRESERVED_SPE~ commercial us~          19.8  
- 5              1592           105 PRESERVED_SPE~ only non-comm~           6.60 
- 6              1592           100 HUMAN_OBSERVA~ commercial us~           6.28 
- 7              1592             2 FOSSIL_SPECIM~ commercial us~           0.126
- 8              1592             2 UNKNOWN        only non-comm~           0.126
- 9              1592             2 FOSSIL_SPECIM~ total                    0.126
-10              1592             2 UNKNOWN        total                    0.126
-```
- 
-* 32% with images (preserved specimen)
-* 514 of 1592 (preserved specimen)
-* 19% commercial use allowed (preserved specimen)
-* 28% with images (human observation)
 
 
 # Rabbits
