@@ -257,6 +257,31 @@ https://www.gbif.org/occurrence/gallery?media_type=StillImage&taxon_key=4689
 * 53% with commercial use allowed (preserved specimen)
 * 931 of 1478 species 
 
+# dragonfly family libellulidae
+
+https://www.gbif.org/occurrence/gallery?media_type=StillImage&taxon_key=5936
+
+
+```
+   totalSpeciesWorld numWithImages basisOfRecord  license        percentCoverage
+               <int>         <int> <chr>          <chr>                    <dbl>
+ 1              1106           442 HUMAN_OBSERVA~ total                  40.0   
+ 2              1106           426 HUMAN_OBSERVA~ only non-comm~         38.5   
+ 3              1106           281 PRESERVED_SPE~ total                  25.4   
+ 4              1106           241 HUMAN_OBSERVA~ commercial us~         21.8   
+ 5              1106            92 PRESERVED_SPE~ commercial us~          8.32  
+ 6              1106            21 PRESERVED_SPE~ only non-comm~          1.90  
+ 7              1106             9 FOSSIL_SPECIM~ total                   0.814 
+ 8              1106             8 FOSSIL_SPECIM~ commercial us~          0.723 
+ 9              1106             1 FOSSIL_SPECIM~ only non-comm~          0.0904
+10              1106             1 UNKNOWN        only non-comm~          0.0904
+11              1106             1 UNKNOWN        total                   0.0904
+```
+
+* 40% with images(human obs)
+* 21% commericial use 
+* 442 of 1106 species
+
 # Spiders
 
 https://www.gbif.org/occurrence/gallery?media_type=StillImage&taxon_key=1496
@@ -395,32 +420,6 @@ https://www.gbif.org/occurrence/gallery?media_type=StillImage&taxon_key=789
 * 1450 of 7040 species
 
 Numbers might be slightly better since dragonflies have 227 427 occurrences with images
-
-# dragonfly family libellulidae
-
-https://www.gbif.org/occurrence/gallery?media_type=StillImage&taxon_key=5936
-
-
-```
-   totalSpeciesWorld numWithImages basisOfRecord  license        percentCoverage
-               <int>         <int> <chr>          <chr>                    <dbl>
- 1              1106           442 HUMAN_OBSERVA~ total                  40.0   
- 2              1106           426 HUMAN_OBSERVA~ only non-comm~         38.5   
- 3              1106           281 PRESERVED_SPE~ total                  25.4   
- 4              1106           241 HUMAN_OBSERVA~ commercial us~         21.8   
- 5              1106            92 PRESERVED_SPE~ commercial us~          8.32  
- 6              1106            21 PRESERVED_SPE~ only non-comm~          1.90  
- 7              1106             9 FOSSIL_SPECIM~ total                   0.814 
- 8              1106             8 FOSSIL_SPECIM~ commercial us~          0.723 
- 9              1106             1 FOSSIL_SPECIM~ only non-comm~          0.0904
-10              1106             1 UNKNOWN        only non-comm~          0.0904
-11              1106             1 UNKNOWN        total                   0.0904
-```
-
-* 40% with images(human obs)
-* 21% commericial use 
-
-
 
 
 # Venomous snake family Elapidae
