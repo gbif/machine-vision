@@ -486,6 +486,6 @@
     <field index="13" term="http://purl.org/dc/terms/rights"/>
     <field index="14" term="http://ns.adobe.com/xap/1.0/rights/Owner"/>
     <field index="16" term="http://unknown.org/Image"/>
-    <field index="16" term="http://unknown.org/Thumbnail"/>
+    <field index="16" term="http://unknown.org/ThumbnailURL"/>
   </extension>
 </archive>

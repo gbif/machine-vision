@@ -54,7 +54,9 @@ paste multimedia-original.txt <(cut -d$'\t' -f 3,4 image-names) | tail -n +2 | g
 
 if [[ -n "images/*.problem(N)" ]]; then
 	echo "Problems retrieving these images:"
-	ls images/*.problem(N)
+	ls images/*.problem
+	mkdir images-problem
+	mv images/*.problem images-problem
 fi
 
 mv meta.xml meta-original.xml

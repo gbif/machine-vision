@@ -1,0 +1,13 @@
+<component name="libraryTable">
+  <library name="Maven: org.gbif.occurrence:download-query-tools:1.22">
+    <CLASSES>
+      <root url="jar://$MAVEN_REPOSITORY$/org/gbif/occurrence/download-query-tools/1.22/download-query-tools-1.22.jar!/" />
+    </CLASSES>
+    <JAVADOC>
+      <root url="jar://$MAVEN_REPOSITORY$/org/gbif/occurrence/download-query-tools/1.22/download-query-tools-1.22-javadoc.jar!/" />
+    </JAVADOC>
+    <SOURCES>
+      <root url="jar://$MAVEN_REPOSITORY$/org/gbif/occurrence/download-query-tools/1.22/download-query-tools-1.22-sources.jar!/" />
+    </SOURCES>
+  </library>
+</component>

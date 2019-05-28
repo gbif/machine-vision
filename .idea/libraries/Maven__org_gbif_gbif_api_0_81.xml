@@ -1,0 +1,13 @@
+<component name="libraryTable">
+  <library name="Maven: org.gbif:gbif-api:0.81">
+    <CLASSES>
+      <root url="jar://$MAVEN_REPOSITORY$/org/gbif/gbif-api/0.81/gbif-api-0.81.jar!/" />
+    </CLASSES>
+    <JAVADOC>
+      <root url="jar://$MAVEN_REPOSITORY$/org/gbif/gbif-api/0.81/gbif-api-0.81-javadoc.jar!/" />
+    </JAVADOC>
+    <SOURCES>
+      <root url="jar://$MAVEN_REPOSITORY$/org/gbif/gbif-api/0.81/gbif-api-0.81-sources.jar!/" />
+    </SOURCES>
+  </library>
+</component>
