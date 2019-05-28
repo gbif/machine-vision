@@ -7,7 +7,7 @@ getImageData = function(friendlyName = "Frogs",friendlyKey = "952",Step=10,maxPa
     pluck("count")
 
   print("total occurrences: " %+% totalCount)
-  if(totalCount > 200000) warn("results might not be accurate over 200 000 limit")
+  if(totalCount > 200000) print("results might not be accurate over 200 000 limit")
 
 
 
